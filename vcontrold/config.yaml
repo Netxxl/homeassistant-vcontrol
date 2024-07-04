@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Vcontrol add-on
-version: "1.10.1"
+version: "1.11.0"
 slug: vcontrold
 description: Vcontrol add-on
 url: "https://github.com/Alexandre-io/homeassistant-vcontrol"
@@ -23,38 +23,24 @@ options:
     - getTempWWsoll:FLOAT
     - getTempKist:FLOAT
     - getTempKsoll:FLOAT
-    - getTempVListM2:FLOAT
-    - getTempKol:FLOAT
-    - getTempSpu:FLOAT
-    - getTempRaumNorSollM1:FLOAT
+    - getTempVListM2:FLOAT 
     - getTempRaumNorSollM2:FLOAT
-    - getTempRaumRedSollM1:FLOAT
     - getTempRaumRedSollM2:FLOAT
     - getBrennerStatus:FLOAT
     - getBrennerStarts:FLOAT
     - getBrennerStunden1:FLOAT
-    - getBrennerStunden2:FLOAT
-    - getPumpeStatusM1:FLOAT
+    - getBrennerStunden2:FLOAT 
     - getPumpeStatusSp:FLOAT
     - getPumpeStatusZirku:FLOAT
-    - getPumpeStatusM2:FLOAT
-    - getMischerM1:FLOAT
-    - getMischerM2:FLOAT
-    - getMischerM3:FLOAT
-    - getError0:STRING
-    - getError1:STRING
-    - getError2:STRING
-    - getError3:STRING
-    - getError4:STRING
-    - getError5:STRING
-    - getError6:STRING
-    - getError7:STRING
-    - getError8:STRING
-    - getError9:STRING
-    - getNeigungM1:FLOAT
-    - getNeigungM2:FLOAT
-    - getNiveauM1:FLOAT
+    - getPumpeStatusM2:FLOAT   
+    - getMischerM2:FLOAT       
+    - getNeigungM2:FLOAT  
     - getNiveauM2:FLOAT
+    - getBetriebPartyM2:FLOAT
+    - setBetriebPartyM2:FLOAT
+    - setBetriebPartyM2:FLOAT
+    - getBetriebArtM2:FLOAT
+    - setBetriebArtM2:FLOAT
 schema:
   tty: "str"
   refresh: "int"
