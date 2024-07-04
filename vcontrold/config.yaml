@@ -55,7 +55,7 @@ schema:
   debug: "bool?"
   commands:
     - "str"
-image: "alexandreio/{arch}-homeassistant-vcontrol"
+image: "Netxxl/{arch}-homeassistant-vcontrol"
 usb: true
 apparmor: false
 ports:
