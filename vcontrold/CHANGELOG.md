@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.11.0
+
+- Use custom vcontrold
+  
 ## 1.10.1
 
 - Improve logging (@ppuetsch)
