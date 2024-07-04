@@ -106,5 +106,5 @@ jobs:
             --${{ matrix.arch }} \
             --target /data/${{ matrix.addon }} \
             --image "${{ steps.check.outputs.image }}" \
-            --docker-hub "alexandreio" \
+            --docker-hub "Netxxl" \
             --addon
