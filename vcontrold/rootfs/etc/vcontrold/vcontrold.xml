@@ -312,7 +312,7 @@
       <commands>
         <command name="getaddr">
           <retry>3</retry>
-          <recvTimeout>4000</recvTimeout>
+          <recvTimeout>150</recvTimeout>
           <send>SYNC;GETADDR $addr $hexlen;RECV $len $unit</send>
         </command>
         <command name="setaddr">
@@ -322,6 +322,10 @@
           <retry>3</retry>
           <recvTimeout>1500</recvTimeout>
           <send>SYNC;GETADDR;SEND BYTES;SEND 02;RECV 02</send>
+        </command>
+        <command name="init">
+          <send>SEND 16 00 00;PAUSE 100;SEND 16 00 00;PAUSE 100</send>
+          <retry>1</retry>
         </command>
       </commands>
     </protocol>
