@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+ <extern xmlns:xi="http://www.w3.org/2003/XInclude">
 <xi:include href="#VCONTROLDXML#" parse="xml"/>
 <xi:fallback>
 <V-Control xmlns:vcontrol="http://www.openv.de/vcontrol">
@@ -451,3 +452,4 @@
 </V-Control>
  </xi:fallback>
 </xi:include>
+  </extern>
