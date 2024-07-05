@@ -55,7 +55,7 @@ schema:
   debug: "bool?"
   commands:
     - "str"
-# image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
+image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
 usb: true
 apparmor: false
 ports:
