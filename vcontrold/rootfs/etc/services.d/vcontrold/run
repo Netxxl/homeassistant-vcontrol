@@ -30,7 +30,7 @@ fi
 ## Check if custom vcontrold.xml file exist
 if [ -f "/config/vcontrold/vcontrold.xml" ]; then
     bashio::log.info "Using a custom vcontrold.xml file"
-    config_file2=/config/vcontrold/vcontrold.xml
+    cp -f /config/vcontrold/vcontrold.xml $config_file2    
 fi
 
 # Cleanup scripts
