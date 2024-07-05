@@ -1,7 +1,4 @@
-<?xml version="1.0"?>
- <extern xmlns:xi="http://www.w3.org/2003/XInclude">
-<xi:include href="#VCONTROLDXML#" parse="xml"/>
-<xi:fallback>
+<?xml version="1.0"?> 
 <V-Control xmlns:vcontrol="http://www.openv.de/vcontrol">
   <unix>
     <config>
@@ -446,10 +443,7 @@
       </commands>
     </protocol>
   </protocols>
-      
-  
-</V-Control>
- </xi:fallback>
-
+  <extern xmlns:xi="http://www.w3.org/2003/XInclude">
     <xi:include href="#VITOXML#" parse="xml"/>
   </extern>
+</V-Control>
