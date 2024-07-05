@@ -1,9 +1,9 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Vcontrold add-on
+name: Vcontrol add-on
 version: "1.10.3"
-slug: vcontrold
+slug: vcontrol
 description: Vcontrold add-on
-url: "https://github.com/Netxxl/homeassistant-vcontrol"
+url: "https://github.com/netxxl/homeassistant-vcontrol"
 arch:
   - armhf
   - armv7
