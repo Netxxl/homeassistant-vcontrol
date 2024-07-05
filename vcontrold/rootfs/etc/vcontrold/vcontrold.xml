@@ -300,7 +300,7 @@
     <protocol name="KW2">
       <macros>
         <macro name="SYNC">
-          <command>SEND 04;WAIT 05</command>
+          <command>SEND 16 00 00 04;WAIT 05</command>
         </macro>
         <macro name="GETADDR">
           <command>SEND 01 F7</command>
@@ -322,11 +322,7 @@
           <retry>3</retry>
           <recvTimeout>1500</recvTimeout>
           <send>SYNC;GETADDR;SEND BYTES;SEND 02;RECV 02</send>
-        </command>
-        <command name="init">
-          <send>SEND 16 00 00;PAUSE 100;SEND 16 00 00;PAUSE 100</send>
-          <retry>1</retry>
-        </command>
+        </command>       
       </commands>
     </protocol>
     <protocol name="GWG">
