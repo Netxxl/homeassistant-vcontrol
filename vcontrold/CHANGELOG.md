@@ -1,8 +1,12 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 1.10.3
+## 1.10.33
 
-- Use custom vcontrold
+- Loop Vclient can be changed to one command per serial connection (leads to more stability on the optolink)
+
+## 1.10.30
+
+- Use custom vcontrold.xml
   
 ## 1.10.1
 
