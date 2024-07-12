@@ -4,7 +4,7 @@
 
 - Loop Vclient can be changed to one command per serial connection (leads to more stability on the optolink)
 
-## 1.10.30
+## 1.10.32
 
 - Use custom vcontrold.xml
   
