@@ -29,6 +29,9 @@ configuration:
   mqtt_topic:
     name: "MQTT Topic"
     description: "Topic where viessmann data are managed. Default is `openv`."
+  loop_vclient:
+    name: "New Vclient serial connection for each Value"
+    description: "Open a new serial connection for each command in commandlist or not (eg. for connection issues)"
   debug:
     name: "Debug"
     description: "Output of debug messages"
