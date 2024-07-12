@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Vcontrol add-on
-version: "1.10.32"
+version: "1.10.33"
 slug: vcontrold
 description: Vcontrold add-on
 url: "https://github.com/netxxl/homeassistant-vcontrol"
@@ -19,26 +19,13 @@ options:
   loop_vclient: false
   debug: false
   commands:
+    - getBetriebArtM2:STRING
     - getTempA:FLOAT
-    - getTempWWist:FLOAT
+    - getTempWWist:FLOAT    
     - getTempWWsoll:FLOAT
     - getTempKist:FLOAT
-    - getTempKsoll:FLOAT
-    - getTempVListM2:FLOAT 
-    - getTempRaumNorSollM2:FLOAT
-    - getTempRaumRedSollM2:FLOAT
-    - getBrennerStatus:FLOAT
-    - getBrennerStarts:FLOAT
-    - getBrennerStunden1:FLOAT
-    - getBrennerStunden2:FLOAT 
-    - getPumpeStatusSp:FLOAT
-    - getPumpeStatusZirku:FLOAT
-    - getPumpeStatusM2:FLOAT   
-    - getMischerM2:FLOAT       
-    - getNeigungM2:FLOAT  
-    - getNiveauM2:FLOAT
-    - getBetriebPartyM2:FLOAT    
-    - getBetriebArtM2:FLOAT   
+    - getTempKsoll:FLOAT    
+    - getBetriebPartyM2:FLOAT 
 schema:
   tty: "str"
   refresh: "int"
@@ -54,7 +41,7 @@ schema:
   debug: "bool?"
   commands:
     - "str"
-# image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
+image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
 usb: true
 apparmor: false
 ports:
