@@ -29,9 +29,12 @@ configuration:
   mqtt_topic:
     name: "MQTT Topic"
     description: "Topic unter dem die Viessmann Daten verwalten werden. Default `openv`"
+  loop_vclient:
+    name: "Neuer Vclient für jeden Aufruf"
+    description: "Für jeden zyklischen Durchlauf der oberen Kommandos einen eigenen VClient aufmachen oder nicht"
   debug:
     name: "Debug"
     description: "Ausgabe von Debug-Nachrichten"
   commands:
     name: "Commands"
-    description: "Befehlsliste, die an das Gerät gesendet werden soll. (Format: `command1:TYPE,command2:TYPE` where `TYPE` must be `FLOAT` or `STRING`)"
+    description: "Befehlsliste (nur GET), die an das Gerät gesendet werden soll und im zyklischen Durchlauf abgefragt werden. (Format: `command1:TYPE,command2:TYPE` where `TYPE` must be `FLOAT` or `STRING`)"
