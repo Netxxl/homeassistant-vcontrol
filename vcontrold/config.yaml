@@ -13,9 +13,10 @@ arch:
 init: false
 options:
   tty: "/dev/ttyUSB0"
-  refresh: 30
+  refresh: 20
   device_id: "2098"
   mqtt_topic: "openv"
+  loop_vclient: false
   debug: false
   commands:
     - getTempA:FLOAT
@@ -36,11 +37,8 @@ options:
     - getMischerM2:FLOAT       
     - getNeigungM2:FLOAT  
     - getNiveauM2:FLOAT
-    - getBetriebPartyM2:FLOAT
-    - setBetriebPartyM2:FLOAT
-    - setBetriebPartyM2:FLOAT
-    - getBetriebArtM2:FLOAT
-    - setBetriebArtM2:FLOAT
+    - getBetriebPartyM2:FLOAT    
+    - getBetriebArtM2:FLOAT   
 schema:
   tty: "str"
   refresh: "int"
@@ -52,14 +50,15 @@ schema:
   mqtt_user: "str?"
   mqtt_password: "str?"
   mqtt_topic: "str"
+  loop_vclient: "bool?"
   debug: "bool?"
   commands:
     - "str"
-image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
+# image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
 usb: true
 apparmor: false
 ports:
-  3002/tcp: null
+  3002/tcp: 3002
 ports_description:
   3002/tcp: "Vcontrol deamon"
 services:
