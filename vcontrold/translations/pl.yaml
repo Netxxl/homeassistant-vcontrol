@@ -29,6 +29,9 @@ configuration:
   mqtt_topic:
     name: "Topic MQTT"
     description: "Topic, na który będa wysyłane dane. Domyślny to `openv`."
+  loop_vclient:
+    name: "Nowy VClient dla każdej wartości"
+    description: "Otwórz nowe połączenie szeregowe dla każdego polecenia na liście poleceń lub nie"
   debug:
     name: "Debugowanie"
     description: "Wyjście dla debugowania"
