@@ -37,4 +37,4 @@ configuration:
     description: "Sortie des messages de débogage"
   commands:
     name: "Commands"
-    description: "Liste des commandes à envoyer. (Format: `command1:TYPE,command2:TYPE` avec `TYPE` qui doit être `FLOAT` ou `STRING`)"
+    description: "Liste des commandes à envoyer (seulement GET). (Format: `command1:TYPE,command2:TYPE` avec `TYPE` qui doit être `FLOAT` ou `STRING`)"
