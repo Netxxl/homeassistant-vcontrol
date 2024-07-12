@@ -37,4 +37,4 @@ configuration:
     description: "Output of debug messages"
   commands:
     name: "Commands"
-    description: "List of commands to send. (Format: `command1:TYPE,command2:TYPE` where `TYPE` must be `FLOAT` or `STRING`)"
+    description: "List of commands to send (only getter). (Format: `command1:TYPE,command2:TYPE` where `TYPE` must be `FLOAT` or `STRING`)"
