@@ -29,6 +29,9 @@ configuration:
   mqtt_topic:
     name: "MQTT Topic"
     description: "Topic MQTT où les données viessmann sont envoyées. La valeur par défaut est `openv`."
+  loop_vclient:
+    name: "Nouveau Vclient pour responsables"
+    description: "Pour que de nouveaux responsables des supérieurs commandent une nouvelle série de communications entre eux ou non"
   debug:
     name: "Debug"
     description: "Sortie des messages de débogage"
