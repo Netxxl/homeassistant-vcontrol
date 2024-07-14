@@ -55,9 +55,7 @@ devices:
   - /dev/ttyUSB1
   - /dev/ttyUSB2
   - /dev/ttyUSB3
-map:
-  - type:  addon_config
-    read_only: False
-  - type: homeassistant_config
+map: 
+  - type: config
     read_only: False
     
