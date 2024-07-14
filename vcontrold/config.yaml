@@ -58,4 +58,6 @@ devices:
 map:
   - type:  addon_config
     read_only: False
+  - type: homeassistant_config
+    read_only: False
     
