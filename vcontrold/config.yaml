@@ -56,4 +56,6 @@ devices:
   - /dev/ttyUSB2
   - /dev/ttyUSB3
 map:
-  - config:rw
+  - type:  addon_config
+    read_only: False
+    
