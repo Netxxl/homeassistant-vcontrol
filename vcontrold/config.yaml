@@ -57,3 +57,4 @@ devices:
   - /dev/ttyUSB3
 map:
   - config
+  - read_only: False
