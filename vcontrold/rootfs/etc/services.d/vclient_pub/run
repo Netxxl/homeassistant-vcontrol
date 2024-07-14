@@ -20,8 +20,11 @@ if bashio::config.true 'loop_vclient'; then
     while read p; do
       echo "$p"
       ## only one command per run, no list anymore
-      vclient -h $VCONTROL_HOST -p $VCONTROL_PORT -c $p -t /etc/vcontrold/2_mqtt.tmpl -x /etc/vcontrold/3_mqtt_pub.sh && exitcode=0 || exitcode=$?
+        cp -f /etc/vcontrold/2_mqtt.tmpl /config/vcontrold/2_mqtt.tmpl        
+        vclient -h $VCONTROL_HOST -p $VCONTROL_PORT -c $p -t /etc/vcontrold/2_mqtt.tmpl -x /etc/vcontrold/3_mqtt_pub.sh && exitcode=0 || exitcode=$?
+        cp -f /etc/vcontrold/3_mqtt_pub.sh /config/vcontrold/3_mqtt_pub.sh
         bashio::log.info "vclient_pub line $p finished with exit code $exitcode."
+        sleep 2
     done < /etc/vcontrold/1_mqtt_commands.txt
 
 else
