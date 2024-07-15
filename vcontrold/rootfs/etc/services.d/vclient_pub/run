@@ -22,11 +22,6 @@ while sleep $REFRESH_RATE; do
 if bashio::config.true 'loop_vclient'; then 
     bashio::log.info "Starting one vclient per command"
     
-    # Cleanup scripts
-    rm /etc/vcontrold/1_mqtt_commands.txt || /bin/true
-    rm /etc/vcontrold/2_mqtt.tmpl || /bin/true
-    echo '#!/bin/sh' > /etc/vcontrold/2_mqtt.tmpl
-    
     commands_array=(`echo $config_commands | tr '|' ' '`)
     i=0
     for command in "${commands_array[@]}"
@@ -35,7 +30,12 @@ if bashio::config.true 'loop_vclient'; then
         ((i=i+1))
         cmd=$(echo $command | cut -d':' -f1)
         type=$(echo $command | cut -d':' -f2)
-    
+        
+        # Cleanup scripts
+        rm /etc/vcontrold/1_mqtt_commands.txt || /bin/true
+        rm /etc/vcontrold/2_mqtt.tmpl || /bin/true
+        echo '#!/bin/sh' > /etc/vcontrold/2_mqtt.tmpl
+        
         bashio::log.info "Run command ${i}: ${cmd} with type ${type}"
         echo $cmd >> /etc/vcontrold/1_mqtt_commands.txt
     
