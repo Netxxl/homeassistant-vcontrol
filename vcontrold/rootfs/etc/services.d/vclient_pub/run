@@ -31,11 +31,6 @@ if bashio::config.true 'loop_vclient'; then
         cmd=$(echo $command | cut -d':' -f1)
         type=$(echo $command | cut -d':' -f2)
         
-        # Cleanup scripts
-        rm /etc/vcontrold/1_mqtt_commands.txt || /bin/true
-        rm /etc/vcontrold/2_mqtt.tmpl || /bin/true
-        echo '#!/bin/sh' > /etc/vcontrold/2_mqtt.tmpl
-        
         bashio::log.info "Run command ${i}: ${cmd} with type ${type}"
         echo $cmd >> /etc/vcontrold/1_mqtt_commands.txt
     
@@ -43,16 +38,12 @@ if bashio::config.true 'loop_vclient'; then
         if [[ $type == "STRING" ]]; then
             R='"$R'$i'"'
         fi
-    
-        echo 'if [ "x$E'$i'" = "xOK" ]; then' >> /etc/vcontrold/2_mqtt.tmpl
-        echo '  mosquitto_pub -h $MQTT_HOST -p $MQTT_PORT -u $MQTT_USER -P $MQTT_PASSWORD -t $MQTT_TOPIC/$C'$i' -m '$R'' >> /etc/vcontrold/2_mqtt.tmpl
-        echo 'fi' >> /etc/vcontrold/2_mqtt.tmpl
-   
-        ## only one command per run, no list anymore
-        cp -f /etc/vcontrold/2_mqtt.tmpl /config/vcontrold/2_mqtt.tmpl        
-        vclient -h $VCONTROL_HOST -p $VCONTROL_PORT -f /etc/vcontrold/1_mqtt_commands.txt -t /etc/vcontrold/2_mqtt.tmpl -x /etc/vcontrold/3_mqtt_pub.sh && exitcode=0 || exitcode=$?
-        cp -f /etc/vcontrold/3_mqtt_pub.sh /config/vcontrold/3_mqtt_pub.sh
+        
+        ## only one command per run, no list anymore               
+        vclient -h $VCONTROL_HOST -p $VCONTROL_PORT -c $cmd        
         bashio::log.info "vclient_pub line $cmd finished with exit code $exitcode."
+        ## publish to mqtt
+        mosquitto_pub -h $MQTT_HOST -p $MQTT_PORT -u $MQTT_USER -P $MQTT_PASSWORD -t $MQTT_TOPIC/$cmd -m '$R''
         sleep 1
     done
 
