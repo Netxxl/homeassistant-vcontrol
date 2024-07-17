@@ -16,8 +16,8 @@ options:
   refresh: 20
   device_id: "2098"
   mqtt_topic: "openv"
-  loop_vclient: false
-  debug: false
+  loop_vclient: true
+  debug: true
   commands:
     - getBetriebArtM2:STRING
     - getTempA:FLOAT
