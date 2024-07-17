@@ -19,13 +19,20 @@ options:
   loop_vclient: true
   debug: true
   commands:
-    - getBetriebArtM2:STRING
-    - getTempA:FLOAT
-    - getTempWWist:FLOAT    
-    - getTempWWsoll:FLOAT
-    - getTempKist:FLOAT
-    - getTempKsoll:FLOAT    
-    - getBetriebPartyM2:FLOAT 
+      - getBetriebArtM2:STRING
+      - getTempA:FLOAT
+      - getTempKist:FLOAT
+      - getTempWWist:FLOAT
+      - getTempKsoll:FLOAT
+      - getBetriebPartyM2:FLOAT
+      - getPumpeStatusM2:FLOAT
+      - getTempPartyM2:FLOAT
+      - getBrennerStunden1:FLOAT
+      - getBrennerStarts:FLOAT
+      - getTempWWsoll:FLOAT
+      - getBrennerStatus:FLOAT
+      - getTempVListM2
+      - getPumpeStatusWW:FLOAT
 schema:
   tty: "str"
   refresh: "int"
