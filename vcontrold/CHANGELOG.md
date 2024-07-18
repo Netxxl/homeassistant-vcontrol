@@ -1,8 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 1.10.33
+## 1.10.36
 
 - Loop Vclient can be changed to one command per serial connection (leads to more stability on the optolink)
+- small cosmetic changes
 
 ## 1.10.32
 
