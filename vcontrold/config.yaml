@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Vcontrol add-on
-version: "1.10.35"
+version: "1.10.36"
 slug: vcontrold
 description: Vcontrold add-on
 url: "https://github.com/netxxl/homeassistant-vcontrol"
@@ -48,7 +48,7 @@ schema:
   debug: "bool?"
   commands:
     - "str"
-# image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
+image: "ghcr.io/netxxl/{arch}-homeassistant-vcontrol"
 usb: true
 apparmor: false
 ports:
